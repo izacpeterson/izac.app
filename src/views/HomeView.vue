@@ -3,7 +3,7 @@
 <template>
   <main class="bg-zinc-900 text-white h-screen flex flex-col items-center overflow-hidden">
     <section>
-      <h1 class="text-[180px] font-thin text-primary">I Z A C</h1>
+      <h1 class="text-8xl lg:text-[180px] font-thin text-primary">I Z A C</h1>
     </section>
     <section>
       <form action="https://google.com/search" class="w-1/4 flex justify-center items-center">
@@ -19,7 +19,7 @@
     </section>
 
     <section>
-      <div class="flex w-1/3 justify-evenly items-center">
+      <div class="flex w-full lg:w-1/3 justify-evenly items-center">
         <div>
           <img :src="weather.image" alt="">
           <span class="capitalize">{{ weather.condition }}</span>
@@ -99,5 +99,10 @@ section{
   display: flex;
   justify-content: center;
   padding: 60px;
+}
+@media (max-width: 768px) {
+  section{
+    padding: 60px 0;
+  }
 }
 </style>
